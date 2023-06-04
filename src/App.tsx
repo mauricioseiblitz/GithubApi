@@ -3,13 +3,16 @@ import './App.css';
 
 import Navbar from 'components/Navbar';
 import Home from 'pages/HOME';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Navbar />
-      <Home />
-    </>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 export default App;
