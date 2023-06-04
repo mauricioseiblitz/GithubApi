@@ -1,0 +1,15 @@
+.btn-container {
+  display: flex;
+}
+
+.btn-container button {
+  margin-top: 20px;
+}
+
+.btn h6 {
+  width: 70px;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: 6px;
+}
