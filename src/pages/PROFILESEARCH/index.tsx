@@ -1,4 +1,3 @@
-import { ReactComponent as MainImage } from 'assets/images/image.svg';
 import ResultCard from 'components/ResultCard';
 import { useState } from 'react';
 import axios from 'axios';
@@ -10,6 +9,7 @@ type FormData = {
 }
 
 type Profile = {
+    avatar_url: string;
     url: string;
     followers: string;
     location: string;
@@ -66,7 +66,7 @@ const ProfileSearch = () => {
             </div>
             <div className="container profile-container">
                 <div className="imagem-container">
-                    <MainImage />
+                    <img src={profile?.avatar_url} alt={profile?.name} />
                 </div>
                 <div className="informacoes-container">
                     <h1>Informações</h1>
