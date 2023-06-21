@@ -64,23 +64,25 @@ const ProfileSearch = () => {
                     </div>
                 </form>
             </div>
-            <div className="container profile-container">
-                <div className="imagem-container">
-                    <img src={profile?.avatar_url} alt={profile?.name} />
-                </div>
-                <div className="informacoes-container">
-                    <h1>Informações</h1>
-                    {profile &&
-                        <>
+
+            {
+                profile &&
+                <>
+                    <div className="container profile-container">
+                        <div className="imagem-container">
+                            <img src={profile?.avatar_url} alt={profile?.name} />
+                        </div>
+                        <div className="container informacoes-container">
+                            <h1>Informações</h1>
                             <ResultCard title='Perfil: ' description={profile.url} />
                             <ResultCard title='Seguidores: ' description={profile.followers} />
                             <ResultCard title='Localidade: ' description={profile.location} />
                             <ResultCard title='Nome: ' description={profile.name} />
-                        </>
-                    }
-                </div>
-            </div>
-        </div>
+                        </div>
+                    </div>
+                </>
+            }
+        </div >
     );
 };
 
